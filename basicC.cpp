@@ -18,7 +18,7 @@ void greeting(string message)
 // Function to calculate area of circle
 double areaOfCircle(double radius)
 {
-    return 3.141592653589793 * radius * radius;
+    return 3.149 * radius * radius;
 }
 
 int main()
@@ -29,15 +29,15 @@ int main()
 
     // Greeting message (full line input)
     cout << "Enter greeting message: ";
-    getline(cin, message);          // ✅ getline used here
+    getline(cin, message);          
     greeting(message);
 
     // Addition
     cout << "Enter two numbers: ";
     cin >> x >> y;
 
-    // IMPORTANT: clear buffer before next getline
-    cin.ignore();                   // 🔥 MOST IMPORTANT LINE
+
+    cin.ignore();                   
 
     // Area of circle
     cout << "Enter radius of circle: ";
