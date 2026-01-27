@@ -13,10 +13,16 @@ public:
 // constructor 
 Student(){
     roll=0;
-    name="";
+    name = "";
     marks= 0.0;
 } 
-
+// parameterized constructor
+Student(int r, string n, float m){
+    roll = r;
+    name = n;
+    marks = m;
+}
+// function to input student details
 void input(){
    cout << "Enter roll number: ";
    cin >> roll;
@@ -29,6 +35,7 @@ void input(){
 void display(){
     cout << roll << "\t" << name << "\t" << marks << endl;
 }
+// destructor
 ~Student(){
     cout << "Student object with roll" << roll << "is Destroyed." << endl;
 }
