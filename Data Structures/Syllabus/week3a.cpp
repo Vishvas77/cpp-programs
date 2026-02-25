@@ -71,6 +71,26 @@ int main()
         cout << "Exiting Program.....";
         break;
 
+
+        case 6:
+    if(v.empty()){
+        cout<<"Vector is empty, nothing to delete";
+    }
+    else{
+        cout<<"Enter element to delete: ";
+        cin>>key;
+
+        vector<int>::iterator it = find(v.begin(), v.end(), key);
+
+        if(it != v.end()){
+            v.erase(it);
+            cout<<"Element deleted successfully";
+        }
+        else{
+            cout<<"Element not found";
+        }
+    }
+    break;
         default:
         cout << "Invalid choice! Try again";
         }
